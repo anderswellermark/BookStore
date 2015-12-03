@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookstore.BookStoreController">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="mnuItemImport" mnemonicParsing="false" onAction="#handleImportAction" text="Import from csv" />
+                        <MenuItem fx:id="mnuItemQuit" mnemonicParsing="false" onAction="#handleQuitAction" text="Quit" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <SplitPane dividerPositions="0.5167037861915368" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <items>
+                <AnchorPane maxWidth="470.0" prefHeight="551.0" prefWidth="470.0">
+                    <children>
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Cart" textAlignment="CENTER" wrapText="false">
+                            <font>
+                                <Font size="18.0" fx:id="x1" />
+                            </font>
+                        </Label>
+                        <TableView fx:id="cartTable" layoutX="11.0" layoutY="54.0" maxWidth="485.0" prefHeight="395.0" prefWidth="485.0">
+                            <columns>
+                                <TableColumn fx:id="carttitleColumn" prefWidth="200" text="Title" />
+                                <TableColumn fx:id="pcsColumn" prefWidth="100" text="Pcs" />
+                                <TableColumn fx:id="rowsumColumn" prefWidth="100" text="Sum" />
+                            </columns>
+                        </TableView>
+                        <Label layoutX="11.0" layoutY="461.0" text="Cart Sum:">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblCartSum" layoutX="75.0" layoutY="461.0" text="">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="btnCheckout" layoutX="11.0" layoutY="491.0" mnemonicParsing="false" onAction="#handleCheckoutAction" text="Checkout and pay">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="670.0">
+                    <children>
+                        <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                        <TableView fx:id="bookTable" layoutY="54.0" prefHeight="560.0" prefWidth="700.0">
+                            <columns>
+                                <TableColumn fx:id="titleColumn" prefWidth="200" text="Title" />
+                                <TableColumn fx:id="authorColumn" prefWidth="200" text="Author" />
+                                <TableColumn fx:id="priceColumn" prefWidth="100" text="Price" />
+                                <TableColumn fx:id="stockBalanceColumn" prefWidth="100" text="In stock" />
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="txtSearchInventory" layoutX="14.0" layoutY="15.0" prefHeight="25.0" prefWidth="387.0" promptText="Search inventory, by title or author" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+            <children>
+                <Label fx:id="lblStatusBar" maxHeight="1.7976931348623157E308" maxWidth="-1.0" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="11.0" fx:id="x3" />
+                    </font>
+                    <textFill>
+                        <Color blue="0" green="0" red="0" fx:id="x4" />
+                    </textFill>
+                </Label>
+                <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>
