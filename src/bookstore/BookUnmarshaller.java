@@ -58,7 +58,7 @@ public class BookUnmarshaller {
             row = rows[i].split(";");
             if (row.length == 4) {
                 double price = NumberFormat.getNumberInstance(Constants.DECIMAL_FORMAT_LOCALE).parse(row[2]).doubleValue();
-                books[i] = new Book(i + 1, row[0], row[1], price, Integer.parseInt(row[3]));
+                books[i] = new Book(row[0], row[1], price, Integer.parseInt(row[3]));
             }
         }
         return books;

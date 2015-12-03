@@ -18,22 +18,16 @@ import javafx.beans.property.SimpleStringProperty;
  */
 public class Book {
     
-    private int id;
     public SimpleStringProperty title = new SimpleStringProperty();
     public SimpleStringProperty author = new SimpleStringProperty();
     public SimpleObjectProperty<BigDecimal> price = new SimpleObjectProperty();
     public SimpleIntegerProperty stockBalance = new SimpleIntegerProperty();
     
-    public Book(int id, String title, String author, double price, int stockBalance) {
-        this.id = id;
+    public Book(String title, String author, double price, int stockBalance) {
         this.title.set(title);
         this.author.set(author);
         this.price.set(BigDecimal.valueOf(price));
         this.stockBalance.set(stockBalance);
-    }
-    
-    public int getId() {
-        return id;
     }
     
     public String getTitle() {

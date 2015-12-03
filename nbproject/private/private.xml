@@ -5,7 +5,9 @@
         <group>
             <file>file:/C:/Users/Anders/OneDrive/Dokument/NetBeansProjects/BookStore/src/bookstore/BookStoreGUI.fxml</file>
             <file>file:/C:/Users/Anders/OneDrive/Dokument/NetBeansProjects/BookStore/src/bookstore/Constants.java</file>
+            <file>file:/C:/Users/Anders/OneDrive/Dokument/NetBeansProjects/BookStore/src/bookstore/model/OrderRow.java</file>
             <file>file:/C:/Users/Anders/OneDrive/Dokument/NetBeansProjects/BookStore/src/bookstore/BookStoreController.java</file>
+            <file>file:/C:/Users/Anders/OneDrive/Dokument/NetBeansProjects/BookStore/src/bookstore/model/BookList.java</file>
             <file>file:/C:/Users/Anders/OneDrive/Dokument/NetBeansProjects/BookStore/src/bookstore/BookUnmarshaller.java</file>
             <file>file:/C:/Users/Anders/OneDrive/Dokument/NetBeansProjects/BookStore/src/bookstore/model/Book.java</file>
             <file>file:/C:/Users/Anders/OneDrive/Dokument/NetBeansProjects/BookStore/src/bookstore/BookStore.java</file>
